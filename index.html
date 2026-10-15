@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой первый сайт</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #f5d0fe);
+  color: #243047;
+  text-align: center;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px 24px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px #00000012;
+    }
+
+    h1 {
+  color: #1d4ed8;
+  font-size: 36px;
+  margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 16px 30px;
+  background: #7c3aed;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+    a:hover {
+      background: #1d4ed8;
+    }
+  
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.services {
+  margin-top: 35px;
+}
+
+.services h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  background: #f8fafc;
+  padding: 18px;
+  margin: 14px 0;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: #1d4ed8;
+}
+
+.service-card p {
+  margin-bottom: 0;
+}
+
+.contacts {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Плавная анимация карточек */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимация кнопок */
+button,
+.contacts a {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover,
+.contacts a:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+/* Анимация карточек */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимация кнопок */
+button,
+.contacts a {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover,
+.contacts a:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+
+/* Верхняя панель сайта */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
+/* Название сайта */
+.site-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2457a7;
+  text-decoration: none;
+}
+
+/* Ссылки меню */
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #2457a7;
+}
+
+/* Меню на телефоне */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  .site-header .logo {
+    font-size: 21px;
+  }
+
+  .site-nav {
+    gap: 16px;
+  }
+}
+
+
+/* Блок преимуществ */
+.benefits {
+  margin: 40px auto;
+  padding: 35px 20px;
+  max-width: 1100px;
+  text-align: center;
+  background: #f3f7ff;
+  border-radius: 20px;
+}
+
+.benefits h2 {
+  color: #2457a7;
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  padding: 25px 18px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-card span {
+  font-size: 36px;
+}
+
+.benefit-card h3 {
+  color: #2457a7;
+  font-size: 19px;
+}
+
+.benefit-card p {
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Отображение на телефонах */
+@media (max-width: 700px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits h2 {
+    font-size: 25px;
+  }
+}
+
+
+/* Блок заказа */
+.order-section {
+  margin: 35px auto;
+  padding: 40px 20px;
+  max-width: 1000px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2457a7, #5488e8);
+  border-radius: 20px;
+}
+
+.order-section h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.order-section p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.order-button {
+  display: inline-block;
+  padding: 14px 24px;
+  color: #2457a7;
+  background: #ffffff;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .order-section {
+    padding: 30px 16px;
+  }
+
+  .order-section h2 {
+    font-size: 25px;
+  }
+
+  .order-button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>
+</head>
+<body>
+    <header class="site-header">
+  <a class="logo" href="#">Золотой ключик</a>
+
+  <nav class="site-nav">
+    <a href="#services">Услуги</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+  <main>
+    <h1>Добро пожаловать на мой сайт!</h1>
+    <p>Я создаю современные сайты для бизнеса и помогаю компаниям находить клиентов.</p>
+    <p>Это моя первая веб-страница, созданная самостоятельно.</p>
+    <a href="https://www.google.com/">Открыть Google</a>
+  
+<section class="services">
+  <h2 id="services">Наши услуги</h2>
+
+  <div class="service-card">
+    <h3>Создание сайтов</h3>
+    <p>Современные сайты для бизнеса и личных проектов.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Разработка приложений</h3>
+    <p>Удобные цифровые решения для ваших задач.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Продвижение в соцсетях</h3>
+    <p>Контент, оформление и развитие вашего бренда.</p>
+  </div>
+</section>
+
+<section class="contacts" id="contacts"></section>
+  <h2>Свяжитесь с нами</h2>
+  <p>Обсудим ваш проект и подберём решение.</p>
+
+  <a
+    href="https://wa.me/996228911598"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Написать в WhatsApp
+  </a>
+</section>
+
+<section class="benefits">
+  <h2>Почему выбирают нас</h2>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <span>💻</span>
+      <h3>Современный дизайн</h3>
+      <p>Красивые и удобные сайты для вашего бизнеса.</p>
+    </div>
+
+    <div class="benefit-card">
+      <span>📱</span>
+      <h3>Для всех устройств</h3>
+      <p>Сайт удобно просматривать на телефоне и компьютере.</p>
+    </div>
+
+    <div class="benefit-card">
+      <span>🚀</span>
+      <h3>Быстрый запуск</h3>
+      <p>Помогаем представить ваши услуги в интернете.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="order-section">
+  <h2>Хотите свой сайт?</h2>
+  <p>Расскажите о своей задаче — обсудим ваш проект.</p>
+  <a class="order-button"
+     href="https://wa.me/996228911598"
+     target="_blank"
+     rel="noopener noreferrer">
+    Заказать сайт в WhatsApp
+  </a>
+</section>
+</main><img
+  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000"
+  alt="Современный рабочий офис"
+  class="hero-image"
+>
+</body>
+
+
+
+</html>
